@@ -10,36 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_134855) do
-
-  create_table "bees", force: :cascade do |t|
-    t.string "name"
-    t.boolean "queen"
-    t.integer "hive_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "flights", force: :cascade do |t|
-    t.integer "bee_id"
-    t.integer "flower_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "flowers", force: :cascade do |t|
-    t.string "name"
-    t.string "pollen_capacity"
-    t.string "integer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "hives", force: :cascade do |t|
-    t.string "name"
-    t.string "honey_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
