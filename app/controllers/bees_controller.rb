@@ -1,5 +1,6 @@
 class BeesController < ApplicationController
   before_action :set_bee , only: [:edit, :update]
+  before_action :set_hives , only: [:edit, :update]
 
 
   def index
@@ -27,5 +28,9 @@ class BeesController < ApplicationController
 
   def bee_params
     params.require(:bee).permit(:name, :hive_id, :queen)
+  end
+
+  def set_hives
+    @hives = Hive.all
   end
 end
